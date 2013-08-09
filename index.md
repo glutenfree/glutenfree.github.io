@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Hello World!
+title: Рецепты безглютеновой кулинарии и не только
 tagline: Supporting tagline
 ---
 {% include JB/setup %}
