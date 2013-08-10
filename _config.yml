@@ -72,7 +72,7 @@ JB :
   #
   archive_path: /archive.html
   categories_path : /categories.html
-  tags_path : /tags.html
+  tags_path : /tag/
   atom_path : /atom.xml
   rss_path : /rss.xml
 
@@ -83,7 +83,7 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : jekyllbootstrap
+      short_name : glutenfree
     livefyre :
       site_id : 123
     intensedebate :

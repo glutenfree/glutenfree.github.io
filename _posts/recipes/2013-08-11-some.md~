@@ -1,0 +1,13 @@
+---
+layout: post
+category : Рецепты
+tagline: "Supporting tagline"
+tags : [выпечка, шоколад]
+---
+{% include JB/setup %}
+
+#Черный принц
+
+##Берем сироп вишневый!
+
+##Затем сироп вишневый!
