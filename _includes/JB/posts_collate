@@ -34,7 +34,7 @@ Usage:
   
   <div class="row">  <div class="span4">  <img alt="{{ post.title }}" src="/assets/{{ post.title }}/finish.jpg"> </div> <div class="span3">
 <span>{{ post.date | date: "%B %e, %Y" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></p> <p> {{ post.summary }} </p> </div> </div>
-  
+  <p></p>
     {% if forloop.last %}
       </ul>
     {% else %}
