@@ -1,15 +1,14 @@
 ---
-layout: default
+layout: page
 ---
-<h2 class="post_title">{{page.title}}</h2>
+
 <ul>
   {%for post in site.posts%}
   {%for category in post.categories%}
   {%if category == page.category%}
-  <li class="archive_list">
-    <time style="color:#666;font-size:11px;" datetime='{{post.date | date: "%Y-%m-%d"}}'>{{post.date | date: "%m/%d/%y"}}</time> <a class="archive_list_article_link" href='{{post.url}}'>{{post.title}}</a>
-    <p class="summary">{{post.summary}}
-   </li>
+   <div class="row">  <div class="span4">  <img alt="{{ post.title }}" src="/assets/{{ post.title }}/finish.jpg"> </div> <div class="span3">
+<span>{{ post.date | date: "%B %e, %Y" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></p> <p> {{ post.summary }} </p> </div> </div>
+  <p></p>
   {%endif%}
   {%endfor%}
   {%endfor%}

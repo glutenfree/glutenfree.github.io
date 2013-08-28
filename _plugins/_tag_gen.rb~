@@ -8,7 +8,7 @@ module Jekyll
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), 'tag_index.html')
       self.data['tag'] = tag
-      tag_title_prefix = site.config['tag_title_prefix'] || 'Posts Tagged &ldquo;'
+      tag_title_prefix = site.config['tag_title_prefix'] || 'Рецепты с ингридиентом &ldquo;'
       tag_title_suffix = site.config['tag_title_suffix'] || '&rdquo;'
       self.data['title'] = "#{tag_title_prefix}#{tag}#{tag_title_suffix}"
     end
@@ -17,7 +17,7 @@ module Jekyll
     safe true
     def generate(site)
       if site.layouts.key? 'tag_index'
-        dir ="glutenfree.github.com/tag"
+        dir = site.config['tags_path']||"tag"
         site.tags.keys.each do |tag|
           write_tag_index(site, File.join(dir, tag), tag)
         end
@@ -25,8 +25,8 @@ module Jekyll
     end
     def write_tag_index(site, dir, tag)
       index = TagIndex.new(site, site.source, dir, tag)
-      index.render(site.layouts, s‎ite.site_payload)
-      index.write(dir)
+      index.render(site.layouts, site.site_payload)
+      index.write(site.dest)
       site.pages << index
     end
   end
